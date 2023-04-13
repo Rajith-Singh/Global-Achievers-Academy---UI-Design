@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Achievers Academy - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- Inline CSS -->
+                <a href="index.html" style="text-decoration: none; color:white">
+                    Global Achievers Academy</a> 
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="registration.html">Registration Form</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>Login</h1>
+            <p>Global Achievers Academy</p>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <form name='login' onSubmit="return formValidation();">
+                    <label for="usertype">Login Type:</label>
+                    <select name="usertype" id="usertype">
+                        <option value="">Select a Login Type</option>
+                        <option value="student">Student</option>
+                        <option value="lecturer">Lecturer</option>
+                        <option value="admin">Administer</option>
+                    </select>
+                    <label for="username">User Name:</label>
+                    <input type="text" name="username" id="username">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" size="30">
+                    <!-- Inline CSS -->
+                    <input type="submit" value="Login" style="margin-top: 10px;">
+                    <input type="reset" value="Reset">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <p>Global Achievers Academy is committed to providing a safe, inclusive, and supportive learning environment for all students.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Main Street, City, State 12345</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@gaa.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="registration.html">Registration Form</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social">
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    function formValidation() {
+    var usertype = document.forms["login"]["usertype"].value;
+    var username = document.forms["login"]["username"].value;
+    var password = document.forms["login"]["password"].value;
+
+    if (usertype == "") {
+        alert("Please select a Login Type");
+        return false;
+    }
+    if (username.length < 5 || username.length > 12) {
+        alert("User Name must be of length 5 to 12");
+        return false;
+    }
+    if (!/^[a-zA-Z]+$/.test(username)) {
+        alert("User Name must contain alphabets only");
+        return false;
+    }
+    if (password.length < 7 || password.length > 12) {
+        alert("Password must be of length 7 to 12");
+        return false;
+    }
+    return true;
+    }
+</script>
+</html>

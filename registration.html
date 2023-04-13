@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Achievers Academy - Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+		body {
+			background-image: url('background.jpg');
+		}
+
+        .registration {
+            padding: 50px 0;
+        }
+    </style>
+    <script type="text/javascript" src="formValidation.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- Inline CSS -->
+                <a href="index.html" style="text-decoration: none; color:white">
+                    Global Achievers Academy</a> 
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="registration.html">Registration Form</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>Registration Form</h1>
+            <p>Global Achievers Academy</p>
+        </div>
+    </header>
+
+    <div class="registration">
+        <section>
+            <div class="container">
+                <form name='registration' onSubmit="return formValidation();">
+                    <ul>
+                        <li><label for="userid">User id:</label></li>
+                        <li><input type="text" name="userid" size="12" /></li>
+                        <li><label for="passid">Password:</label></li>
+                        <li><input type="password" name="passid" size="12" /></li>
+                        <li><label for="username">Name:</label></li>
+                        <li><input type="text" name="username" size="50" /></li>
+                        <li><label for="address">Address:</label></li>
+                        <li><input type="text" name="address" size="50" /></li>
+                        <li><label for="country">Country:</label></li>
+                        <li><select name="country">
+                                <option selected="" value="Default">(Please select a
+                                    country)</option>
+                                <option value="AF">Australia</option>
+                                <option value="AL">Canada</option>
+                                <option value="DZ">India</option>
+                                <option value="AS">Russia</option>
+                                <option value="AD">USA</option>
+                        </select></li>
+                        <li><label for="zip">ZIP Code:</label></li>
+                        <li><input type="text" name="zip" /></li>
+                        <li><label for="email">Email:</label></li>
+                        <li><input type="text" name="email" size="50" /></li>
+                        <li><label id="gender">Sex:</label></li>
+                        <li><input type="radio" name="msex" value="Male" /><span>Male</span></li>
+                        <li><input type="radio" name="msex" value="Female" /><span>Female</span></li>
+                        <li><label>Language:</label></li>
+                        <li><input type="checkbox" name="en" value="en" checked /><span>English</span></li>
+                        <li><input type="checkbox" name="nonen" value="noen" /><span>Non
+                                English</span></li>
+                        <li><label for="desc">About:</label></li>
+                        <li><textarea name="desc" id="desc"></textarea></li>
+                        <li><input type="submit" name="submit" value="Submit" /></li>
+                    </ul>
+                </form>
+            </div>
+        </section>      
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <p>Global Achievers Academy is committed to providing a safe, inclusive, and supportive learning environment for all students.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Main Street, City, State 12345</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@gaa.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="registration.html">Registration Form</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social">
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
